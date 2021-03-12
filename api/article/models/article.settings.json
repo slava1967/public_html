@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "categories": {
+      "via": "articles",
+      "collection": "category",
+      "dominant": true
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "article"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
