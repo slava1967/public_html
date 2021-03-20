@@ -12,6 +12,7 @@ module.exports = {
         name: ctx.name,
         email: ctx.email,
         content: ctx.content,
+        article: ctx.article,
         status: null,
         published_at: null
       })

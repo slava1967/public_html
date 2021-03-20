@@ -9,9 +9,9 @@ module.exports = {
   async create(ctx) {
     try {
       const article = await strapi.query('article').create({
-        name: ctx.title,
+        title: ctx.title,
         content: ctx.content,
-        categories: [],
+        categories: ctx.categories,
         status: null,
         published_at: null
       })
